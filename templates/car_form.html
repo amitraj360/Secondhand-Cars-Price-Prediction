@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+{%load static from staticfiles%}
+<html>
+	<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+	</head>
+	<style>
+	.button {
+ 	 display: inline-block;
+ 	 border-radius: 0px;
+ 	 background-color: #FFFF00;
+ 	 background-size: cover;
+ 	 border: none;
+ 	 color: #000000;
+ 	 text-align: center;
+ 	 font-size: 15px;
+ 	 padding: 20px;
+ 	 width: 100px;
+ 	 transition: all 0.5s;
+ 	 cursor: pointer;
+  	margin: -1570px 0px 250px 1100px;
+}
+
+	.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+	}
+
+	.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+	}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+	body
+	{
+	 background: url("{%static 'car5.jpg'%}") 50% 0% no-repeat;
+    	 color: white;
+         background-size: cover;
+	 padding: 1px 0 0 0 ;
+	}
+	h1{
+  	font-size:2.0em;
+  	color:#925252;
+	}
+	.box{
+  	width: 440px ;
+  	background-size: cover;
+  	border-radius:0px;
+ 	 margin: 0 auto 0 auto;
+ 	 padding:70px 0px 70px 0px;
+ 	 border: #ffffff 4px solid; 
+	}
+	.fm{
+	color:#000000;
+	border-radius:30px;
+	
+	}
+	
+	.head{
+	background: url("{%static 'new.jpeg'%}") 90% 0% no-repeat;
+  	width: 220px;
+  	background-size: contain;
+  	border-radius:0;
+ 	margin: 20px 0px 20px 20px;
+ 	padding: 60px 0px 0px 0px;
+ 	border: #2980b9 0px solid;
+
+	}
+	hr{
+		border-color:#ffffff;
+		border-width: 3px;
+	}
+	.btn {
+  	border: none; /* Remove borders */
+  	color: red; /* Add a text color */
+  	padding: 14px 28px; /* Add some padding */
+ 	cursor: pointer; /* Add a pointer cursor on mouse-over */
+ 	column-gap: 40px;
+ 	margin: 10px auto 0 700px;
+ }	
+ 	.loader {
+	  border: 10px solid #f3f3f3; /* Light grey */
+ 	 border-top: 10px solid #3498db; /* Blue */
+ 	 border-radius: 50%;
+ 	 width: 80px;
+ 	 height: 80px;
+ 	 border-top: 10px solid blue;
+ 	 border-right: 10px solid green;
+ 	 border-bottom: 10px solid red;
+  	animation: spin 2s linear infinite;
+	}
+
+	@keyframes spin {
+ 	 0% { transform: rotate(0deg); }
+ 	 100% { transform: rotate(360deg); }
+	}
+	.container-contact3 {
+  	width: 100%;  
+ 	 min-height: 100vh;
+ 	 display: -webkit-box;
+  	display: -webkit-flex;
+ 	 display: -moz-box;
+ 	 display: -ms-flexbox;
+ 	 display: flex;
+ 	 flex-wrap: wrap;
+ 	 justify-content: center;
+  	align-items: center;
+ 	 padding: 0px 0px 0px 0px;
+ 	 margin: -10px 0px 100px 0px;
+ 	
+  
+	}
+
+	.wrap-contact3 {
+ 	 width: 500px;
+ 	 background: #80c64a;
+  	background: -webkit-linear-gradient(45deg, #56ab2f, #a8e063);
+ 	 background: -o-linear-gradient(45deg, #56ab2f, #a8e063);
+  	background: -moz-linear-gradient(45deg, #56ab2f, #a8e063);
+  	background: linear-gradient(45deg, #56ab2f, #a8e063);
+  	border-radius: 10px;
+ 	 overflow: hidden;
+  	padding: 72px 55px 65px 55px;
+  	 box-shadow: 10px 10px 5px gray;
+
+  	}
+  	.pridict{
+  	background-color:#000000;
+  	color:  white;
+  	}
+}
+
+
+
+</style>
+	<body>
+		
+			
+			<div class =" head" >
+			
+			</div>
+			
+			<center>
+			
+					<div class= "pridict">
+					
+					<h1 style="color:white;"> PRIDICT HERE  </h1>
+					
+					</div>
+					<div class="container-contact3">
+						<div class="wrap-contact3">
+						<form method="post" action="\admin\">
+							<div class= "fm">
+			       				 {{ form.as_p|linebreaks}}
+			       
+							<input type="submit" value="Predict" >
+  							</div>
+						</form>
+				</div>	
+				
+				
+  				
+  				
+  				
+  				
+			</div> <!-- End Box -->
+
+			
+			
+			 <!-- End Btn -->
+			
+</form>
+  <div class="loader">
+  </div>
+
+		</center>
+		<button class="button" style="vertical-align:middle"><span> BACK </span></button>
+	</body>
+</html>
